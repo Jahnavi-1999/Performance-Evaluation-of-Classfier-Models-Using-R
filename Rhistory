@@ -1,0 +1,345 @@
+install.packages("gmodels")
+library(gmodels)
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("gmodels")
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- knn(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("e1071")
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- knn(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("e1071")
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- DecicionTree(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("party")
+install.packages("e1071")
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- DecicionTree(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("party")
+install.packages("e1071")
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- DecicionTree(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("party")
+install.packages("e1071")
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("gmodels")
+install.packages("e1071")
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("gmodels")
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- knn(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+kappa(table(sms_test$type, sms_test_pred))
+kappa(table(sms_test$type, sms_test_pred))
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("e1071")
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- DecicionTree(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("party")
+install.packages("e1071")
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- knn(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+install.packages("party")
+install.packages("e1071")
+install.packages("e1071")
+Kappa(table(sms_test$type, sms_test_pred)
+install.packages("e1071")
+Kappa(table(sms_test$type, sms_test_pred)
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- DecicionTree(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("gmodels")
+install.packages("e1071")
+install.packages("gmodels")
+library(gmodels)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- naiveBayes(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("party")
+library(party)
+install.packages("e1071")
+library(e1071)
+library(vcd)
+sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+str(sms_raw)
+sms_raw$type <- factor(sms_raw$type)
+table(sms_raw$type)
+sms_train <- sms_raw[1:4180, ]
+sms_test <- sms_raw[4181:5574, ]
+sms_classifier <- DecicionTree(sms_train, sms_train$type)
+sms_test_pred <- predict(sms_classifier, sms_test)
+CrossTable(sms_test_pred, sms_test$type,
+prop.chisq = FALSE, prop.t = FALSE,
+dnn = c('predicted', 'actual'))
+Kappa(table(sms_test$type, sms_test_pred))
+install.packages("e1071")
